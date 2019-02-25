@@ -8,7 +8,10 @@
   <title>Document</title>
 </head>
 <body>
-<app-parent></app-parent>
-<app-child></app-child>
+  <div>
+    <h3>The child component display:</h3>
+  <p>{{x}}</p>
+    <button type="button"  (click)="sendValue()" >increment</button>
+  </div>
 </body>
 </html>
