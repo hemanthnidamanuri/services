@@ -14,5 +14,6 @@ export class DataServiceService {
 
   getValue(): Observable<any>{
   return this.subject.asObservable();
+
   }
 }

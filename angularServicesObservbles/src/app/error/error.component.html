@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="table">
+    <table border="1px;">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>UserName</th>
+        <th>email</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Website</th>
+        <th>Company</th>
+      </tr>
+      <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>
+          street:{{user.address.street}}
+          <br>
+          suite:{{user.address.suite}}
+          <br>
+          city:{{user.address.city}}
+          <br>
+          zipcode:{{user.address.zipcode}}
+          <br>
+          lat:{{user.address.geo.lat}}
+          <br>
+          lng:{{user.address.geo.lng}}
+        </td>
+        <td>{{user.phone}}</td>
+        <td>{{user.website}}</td>
+        <td>
+          name:{{user.company.name}}
+          <br>
+          catchPhrase:{{user.company.catchPhrase}}
+          <br>
+          bs:{{user.company.bs}}
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
